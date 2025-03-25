@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Hồ Gươm",
+        "lat": 21.0285,
+        "lng": 105.8542,
+        "info": "Một địa điểm du lịch nổi tiếng tại Hà Nội."
+    },
+    {
+        "name": "Chợ Bến Thành",
+        "lat": 10.7725,
+        "lng": 106.6983,
+        "info": "Khu chợ nổi tiếng của TP. Hồ Chí Minh."
+    }
+]
