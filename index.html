@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- khai bao thu vien bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <!--  liên kết file css ngoài -->
+ <link rel="stylesheet" type="text/css" href="Layout_chinh_style.css">
+<!--  thu vien Leaflet
+ Include Leaflet CSS file in the head section of your document: -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <!-- Include Leaflet JavaScript file after Leaflet’s CSS: -->
+ <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+   <!--   plugins/leaflet-fullscreen -->
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+  <!-- Leaflet-MiniMap-master -->
+  <link href="thuvien_leaflet/Leaflet-MiniMap-master/Leaflet-MiniMap-master/dist/Control.MiniMap.min.css">
+ <!--  Leaflet.Control.Opacity-maste -->
+ <link href="thuvien_leaflet/Leaflet.Control.Opacity-master/Leaflet.Control.Opacity-master/src/L.Control.Opacity.css">
+
+
+</head>
+<body>
+    <!-- 1.header -->
+    <div class="
+    container-fluid p-3
+    text-primary-emphasis style_header " >
+
+    <h2 class="fw-bold text-center text-success-emphasis">WEBGIS CUNG CẤP THÔNG TIN THỬA ĐẤT</h2>
+
+
+    </div>
+   <!--  2. content -->
+   <div class="container-fluid text-center p-0 cus_content">
+    <div class="row align-items-start cus_content_1">
+          <!-- 2.1 Control Panel (left) -->
+      <div class="col-4  cus_content_col4" >
+        <button class="tablink" onclick="openPage('Home', this, '#09a115')" id="defaultOpen">Dữ liệu</button>
+        <button class="tablink" onclick="openPage('News', this, '#09a115')" >Truy vấn</button>
+        <button class="tablink" onclick="openPage('Contact', this, '#09a115')">Thống kê</button>
+        <button class="tablink" onclick="openPage('About', this, '#09a115')">Quản lý</button>
+       <!--  1.du liệu -->
+        <div id="Home" class="tabcontent">
+          <div class="form-check form-switch form_check_cus" >
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked style="margin-left: 50px;">
+            <label class="form-check-label cus_label_check" for="flexSwitchCheckDefault" >Lớp thửa đất</label>
+          </div>
+
+          <div class="form-check form-switch form_check_cus" >
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" style="margin-left: 50px;">
+            <label class="form-check-label cus_label_check" for="flexSwitchCheckChecked">Lớp quy hoạch</label>
+          </div>
+       
+        </div>
+       <!--  2.Truyvan -->
+        <div id="News" class="tabcontent">
+          <!-- 2.1 Nhập giá trị -->
+          <div class="row">
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="Nhập số tờ" aria-label="First name">
+            </div>
+
+            <div class="col-6">
+              <input type="text" class="form-control" placeholder="Nhập số thửa" aria-label="Last name">
+            </div>
+
+            <button class="btn btn-warning cus_btn" type="submit">Tìm kiếm</button>
+          </div>
+          <hr>
+          <!-- 2.2 Bảng kết quả truy vấn-->
+          <div>
+            <h5>Kết quả truy vấn</h5>
+
+
+          </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+<!--         3.Thống kê -->
+        <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+        <!-- 4.Quản lý DL -->
+        <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>Who we are and what we do.</p>
+        </div>
+      </div>
+
+
+
+
+
+       <!--  2.2 Map (right) -->
+      <div class="col-8 bg-info cus_content_col8">
+        <div id="mymap" style="height: 100%; 
+        margin: 0 !important; padding: 0 !important; text-align: justify;"></div>
+      </div>
+     
+    </div>
+  </div>
+  <script src="wmsbetter.js"></script>
+  <script src="thuvien_leaflet/leaflet.browser.print-master/leaflet.browser.print-master/dist/leaflet.browser.print.min.js"></script>
+  <!-- Leaflet.Control.Opacity-master -->
+<script src="thuvien_leaflet/Leaflet.Control.Opacity-master/Leaflet.Control.Opacity-master/src/L.Control.Opacity.js"></script>
+  <!-- Leaflet-MiniMap-master -->
+  <script src="thuvien_leaflet/Leaflet-MiniMap-master/Leaflet-MiniMap-master/dist/Control.MiniMap.min.js"></script>
+<!--   /plugins/leaflet-fullscreen -->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+    
+      <script src="function_openpage.js"></script>
+      <script src="map_web.js"></script>
+</body>
+</html>

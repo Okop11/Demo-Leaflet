@@ -1,0 +1,140 @@
+html,body{
+    height: 100%;
+    width: 100%;
+   /*  background-color: antiquewhite */;
+    overflow-x: hidden; /* trục ngang */
+    overflow-y: hidden; /* trục đứng */
+    padding: 0;
+    margin: 0;
+}
+.style_header{
+    background-color: rgb(217, 249, 221);
+    height: 10%;
+    border-bottom: 5px solid yellow;
+   
+}
+.style_name{
+    text-align: center;
+    color: rgb(9, 69, 9);
+    margin: 0;
+    padding-top: 20px;
+}
+.style_menu{
+    height: 5%;
+    background-color: rgb(38, 104, 23);
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.style_item_menu{
+    width:25%;
+    float:left;
+    text-align: center;
+    list-style-type: none;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+}
+.style_item_menu:hover{
+    background-color: greenyellow;
+    color:rgb(8, 107, 8);
+}
+.style_item_link{
+    color:white;
+    text-decoration: none;
+}
+.style_item_link:hover{
+    color:rgb(8, 107, 8);
+}
+
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropbtn {
+    font-size: 20px;
+    text-align: center;
+    padding-left:180px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    color: white;
+    /* padding: 14px 16px; /* top-bottom ; right-left */ 
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+
+  
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a grey background color to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .style_content{
+    height: 75%;
+    background-image: url('https://cdn.thuvienphapluat.vn/uploads/tintuc/2024/02/03/quy-dinh-tach-thua.jpg');
+    background-size: cover;
+
+  }
+  .style_text_content{
+    margin: 0;
+    font-size: 18px;
+    text-align: justify;
+    padding: 30px 50px 30px 50px; /* top-right-bottom-left */
+    line-height: 30px;
+}
+.btn{
+    width:180px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    background-color: rgb(230, 248, 92);
+    margin: 100px 0px 0px 680px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0px;
+}
+  .style_footer{
+    height: 10%;
+    background-color: rgb(197, 248, 169);
+  }
+  .style_item_footer{
+    width:33.33333%;
+    float:left;
+    text-align: center;
+    list-style-type: none;
+    padding-top: 30px;
+   
+    font-size: 16px;
+    
+}
